@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    :root {
+        --cor: #000
+    }
+    #area {
+        height: 200px;
+        width: 200px;
+        background-color: var(--cor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #texto {
+        color: white;
+    }
+    </style>
+</head>
+<body>
+  <div id="area">
+        <h1 id="texto">
+            Texto
+        </h1>
+    </div>
+<script>
+let ref = document.querySelector(':root');
+let refStyle = getComputedStyle(ref);
+let corArea = refStyle.getPropertyValue('--cor')
+let corTexto = document.getElementById('texto')
+
+if (corArea == '#000') {
+    corTexto.style.color = 'white';
+}
+else (
+    corTexto.style.color = 'black'
+)
+
+
+
+
+
+
+
+</script>
+
+
+
+  
+
+
+</body>
+</html>
